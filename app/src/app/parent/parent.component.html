@@ -1,0 +1,10 @@
+<h1>THis the Parent Component</h1>
+
+
+<input type="text" placeholder="Enter the Message For Your Child" (change)="getParentInput($event)"/>
+
+<button (click)="sendToChild()">Send To Child</button>
+
+<h2>{{childMsg}}</h2>
+
+<app-child [parentMsg]="parentMsgg()"   (childEventEmit)="getChildMsg($event)"></app-child>
